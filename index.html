@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SSH | Secure Shell</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <h1>Secure Shell (SSH)</h1>
+
+    <p>
+        SSH for Secure Shell is way/pro of
+        connecting to computers remotely.
+        This process involves a client and
+        a server to which the client wants to connect.
+        It requires an ssh utility program like 
+        <a href="https://www.openssh.com/" rel="noopener noreferrer" >OpenSSH</a>.
+
+    </p>
+
+    <p>
+        To connect to a user on the server/host the command goes like this:
+        <div>ssh username@hostname -p portNumber</div>
+    </p>
+    <p>
+        where ssh is to invoke ssh utility proram 
+        <a href="https://www.openssh.com/" rel="noopener noreferrer" >OpenSSH</a>, username is the name of the user
+        you want to connect to on the server. It's not your username.
+        The hostname is the server on which the user lives. '-p' is 
+        to specify the port number.
+    </p>
+
+    <p> 
+        This process of connection works using a type of 
+        authentication that require public and private keys.
+    </p>
+    <h3>Public Key</h3>
+    <p>
+        The public key is on the server/host and is publicaly
+        available to use for any computer that wants to connect.
+    </p>
+
+    <h3>Private Key</h3>
+    <p>
+        The private key is provided by the server to the user and is stored on 
+        the user's computer that wants to 
+        connect and is it's specific for each user. This private key on the 
+        user can be stolen as it's stored in the hardware. If stolen it can be 
+        used to communicate to the server prentending to be the legit user.
+        So it's better to enable passphrase to use the private key each time the user wants to
+        login to the server.
+</p>
+
+<p>
+    The communication starts when user tell the server to connect, the server validates the user
+    by asking for the private key. The user enables access to the pirvate key by typing 'yes' on the
+    command line or passphrase if enabled. Then after authentication the server starts communicating 
+    with the user by sending encrypted messages using public key. After reaching the user side the 
+    messages are decrypted using the private key provided by the server stored in the user's computer.
+</p>
+</body>
+
+</html>
