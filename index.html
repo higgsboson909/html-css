@@ -10,7 +10,7 @@
     <h1>Secure Shell (SSH)</h1>
 
     <p>
-        SSH for Secure Shell is a way/pro of
+        SSH for Secure Shell is a secure way/process of
         connecting to computers remotely.
         This process involves a client and
         a server to which the client wants to connect.
@@ -34,11 +34,14 @@
     <p> 
         This process of connection works using a type of 
         authentication that require public and private keys.
+        
     </p>
     <h3>Public Key</h3>
     <p>
         The public key is on the server/host and is publicaly
         available to use for any computer that wants to connect.
+        This key is used by server to send encrypted messages to the 
+        remote user.
     </p>
 
     <h3>Private Key</h3>
@@ -46,19 +49,27 @@
         The private key is provided by the server to the user and is stored on 
         the user's computer that wants to 
         connect and is it's specific for each user. This private key on the 
-        user can be stolen as it's stored in the hardware. If stolen it can be 
+        user computer can be stolen as it's stored in the hardware. If stolen, it can be 
         used to communicate to the server prentending to be the legit user.
         So it's better to enable passphrase to use the private key each time the user wants to
         login to the server.
 </p>
 
 <p class="process">
-    The communication starts when user tell the server to connect, the server validates the user
+    The communication starts when remoter user tell the server to connect, the server validates the user
     by asking for the private key. The user enables access to the pirvate key by typing 'yes' on the
     command line or passphrase if enabled. Then after authentication the server starts communicating 
     with the user by sending encrypted messages using public key. After reaching the user side the 
     messages are decrypted using the private key provided by the server stored in the user's computer.
 </p>
+
+<h3>SSH In Github</h3>
+<p>
+    Github has a way that enables remote users to clone repositories securely using Secure Shell(SSH) 
+    to their local storage.
+</p>
+
+<img src="./images/ssh.jpg" alt="SSH option to clone a repository">
 </body>
 
 </html>
