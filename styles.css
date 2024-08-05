@@ -62,16 +62,10 @@ h3{
 }
 
 a{
-    background-color: #545D58;
-    color: white;
-    text-align: center;
-    padding: 5px;
-    width: 500px;
-    height: 40px;
-    margin-left: auto;
-    margin-right: auto;
-
+    font-weight: 400;
+    font-size: 25px;
 }
+
 .process{
     margin-top: 50px;
 }
