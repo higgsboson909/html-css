@@ -66,6 +66,14 @@ a{
     font-size: 25px;
 }
 
+img{
+    height: 300px;
+    width: 585px;
+    margin-right: auto;
+    margin-left: 400px;
+    margin-bottom: 40px;
+    
+}
 .process{
     margin-top: 50px;
 }
